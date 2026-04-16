@@ -1,0 +1,17 @@
+column,description
+animal_id,Unique animal identifier
+species,Animal species (Dog/Cat/etc.)
+intake_date,Date of intake (link to dim_date)
+outcome_date,Date of outcome (link to dim_date; inactive relation)
+days_to_outcome,Days from intake to outcome
+is_adoption,Outcome is Adoption (True/False)
+is_euthanasia,Outcome is Euthanasia (True/False)
+has_outcome,Row has any outcome recorded
+breed,Recorded breed
+breed_group,Pure/Mixed flag
+color,Recorded color
+color_simple,Simplified base color
+sex_intake_norm,Normalized sex at intake
+fixed_at_intake,Spayed/Neutered at intake (bool)
+age_days_intake,Age in days at intake
+age_group_intake,Age group at intake bucket

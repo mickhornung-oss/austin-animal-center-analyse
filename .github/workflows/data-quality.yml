@@ -1,0 +1,30 @@
+name: Data Analysis Quality Check
+
+on: [push, pull_request]
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install tools
+      run: |
+        python -m pip install --upgrade pip
+        pip install flake8 black isort pandas
+    
+    - name: Check code format (Black)
+      run: black --check . || true
+    
+    - name: Lint with flake8
+      run: flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics || true
+    
+    - name: Verify data files
+      run: |
+        echo "Data files present:"
+        ls -lh *.csv 2>/dev/null || echo "No CSV files found"

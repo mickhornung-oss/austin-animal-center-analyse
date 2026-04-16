@@ -15,9 +15,16 @@ Aus einem flachen, unstrukturierten Rohdatensatz wurde ein relationales Datenmod
 * **Erfolgsmessung:** Die Euthanasiequote sank kontinuierlich von über 10% auf unter 8%.
 
 ## Tech Stack
-* Python · pandas · matplotlib · Datenmodellierung (Sternschema)
+* Power BI · Datenmodellierung (Sternschema) · CSV
+
+## Dateien
+- `Abschluss Austin.pbix` – Power BI Bericht
+- `Datenanalyse – Austin Animal Center.pptx` – Ergebnispräsentation
+- `fact_events_clean.csv` – Faktentabelle (aufbereitete Ereignisdaten)
+- `dim_animal.csv` – Dimensionstabelle (Tier-Metadaten)
+- `data_dictionary.csv` – Datenwörterbuch
 
 ## Lokale Ausführung
 1. Repository klonen
-2. `pip install pandas matplotlib`
-3. Jupyter Notebook öffnen und ausführen
+2. `Abschluss Austin.pbix` in Power BI Desktop öffnen
+3. CSV-Dateien liegen bereits im Ordner und werden automatisch referenziert
